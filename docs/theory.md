@@ -40,7 +40,8 @@ Here $u(x,t)$ is a transported scalar quantity and $c$ is the constant advection
 The exact solution is:
 
 $$
-u(x,t)=u_0(x-ct).$$
+u(x,t)=u_0(x-ct).
+$$
 
 Therefore, the initial condition should translate without changing shape. This makes linear advection a very clean numerical benchmark.
 
@@ -49,8 +50,8 @@ In this project, the initial condition is a square pulse:
 $$
 u(x,0)=
 \begin{cases}
-1, &amp; 1\leq x \leq 2,\\
-0, &amp; \text{otherwise}.
+1, & 1\leq x \leq 2,\\
+0, & \text{otherwise}.
 \end{cases}
 $$
 
@@ -105,7 +106,8 @@ u_j^n
 -
 \frac{c\Delta t}{2\Delta x}
 \left(
-u_{j+1}^n-u_{j-1}^n\right).
+u_{j+1}^n-u_{j-1}^n
+\right).
 $$
 
 Although this scheme is consistent, it is unstable for pure advection. It does not respect the one-sided propagation direction of the equation.
@@ -116,7 +118,7 @@ This shows that consistency is not sufficient. A numerical scheme must also be s
 
 ## 5. Upwind scheme
 
-For $c&gt;0$, information comes from the left. The upwind method uses:
+For $c>0$, information comes from the left. The upwind method uses:
 
 $$
 u_j^{n+1}
@@ -125,7 +127,8 @@ u_j^n
 -
 \frac{c\Delta t}{\Delta x}
 \left(
-u_j^n-u_{j-1}^n\right).
+u_j^n-u_{j-1}^n
+\right).
 $$
 
 This respects the physical direction of propagation. It is stable under the CFL condition.
@@ -136,7 +139,7 @@ However, upwind is first-order accurate and introduces numerical diffusion. The 
 
 ## 6. Downwind scheme
 
-The downwind method for $c&gt;0$ uses:
+The downwind method for $c>0$ uses:
 
 $$
 u_j^{n+1}
@@ -145,7 +148,8 @@ u_j^n
 -
 \frac{c\Delta t}{\Delta x}
 \left(
-u_{j+1}^n-u_j^n\right).
+u_{j+1}^n-u_j^n
+\right).
 $$
 
 This uses information from the wrong side of the grid. For positive advection speed, the downstream point should not determine the upstream update.
@@ -165,7 +169,8 @@ u_j^{n+1}
 -
 \frac{c\Delta t}{2\Delta x}
 \left(
-u_{j+1}^n-u_{j-1}^n\right).
+u_{j+1}^n-u_{j-1}^n
+\right).
 $$
 
 The neighbour average stabilizes the method by adding artificial diffusion. This avoids instability but smooths the solution.
@@ -225,7 +230,8 @@ Burgers equation is nonlinear because the propagation speed is $u$ itself. Large
 The initial condition used is:
 
 $$
-u(x,0)=2+0.5\sin(2\pi x).$$
+u(x,0)=2+0.5\sin(2\pi x).
+$$
 
 Since $u$ is positive, the wave propagates mainly to the right, but different parts of the wave propagate at different speeds.
 
@@ -243,12 +249,13 @@ u_j^n
 u_j^n
 \frac{\Delta t}{2\Delta x}
 \left(
-u_{j+1}^n-u_{j-1}^n\right).
+u_{j+1}^n-u_{j-1}^n
+\right).
 $$
 
 It is simple, but fragile when gradients steepen.
 
-The upwind Burgers update chooses the stencil according to the sign of $u_j$. If $u_j&gt;0$, it uses a backward difference. If $u_j&amp;lt;0$, it uses a forward difference.
+The upwind Burgers update chooses the stencil according to the sign of $u_j$. If $u_j>0$, it uses a backward difference. If $u_j<0$, it uses a forward difference.
 
 This is more physically appropriate because the characteristic speed is local.
 
@@ -281,7 +288,8 @@ E_2=
 \frac{1}{N}
 \sum_j
 \left(
-u_j^{\mathrm{num}}-u_j^{\mathrm{ref}}\right)^2
+u_j^{\mathrm{num}}-u_j^{\mathrm{ref}}
+\right)^2
 }.
 $$
 
