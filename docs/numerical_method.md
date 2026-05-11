@@ -228,7 +228,7 @@ For Burgers equation, the local characteristic speed is $u_j$. Therefore, the di
 If
 
 $$
-u_j&gt;0,
+u_j>0,
 $$
 
 information travels to the right and the derivative should use the left neighbour:
@@ -242,7 +242,7 @@ $$
 If
 
 $$
-u_j&amp;lt;0,
+u_j<0,
 $$
 
 information travels to the left and the derivative should use the right neighbour:

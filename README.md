@@ -67,7 +67,8 @@ $$
 The advection simulation transports a square pulse through a periodic one-dimensional domain. In the exact solution, the pulse should move without changing shape:
 
 $$
-u(x,t)=u_0(x-ct).$$
+u(x,t)=u_0(x-ct).
+$$
 
 This makes the problem a clean benchmark for numerical methods. Any smoothing, oscillation or growth of the pulse is caused by the discretization.
 
@@ -108,7 +109,8 @@ Lax-Friedrichs stabilizes the centered update by adding neighbour averaging. Thi
 The Burgers simulation starts from a smooth sinusoidal profile:
 
 $$
-u(x,0)=2+0.5\sin(2\pi x).$$
+u(x,0)=2+0.5\sin(2\pi x).
+$$
 
 Unlike linear advection, the propagation speed is now the solution itself. Larger values of $u$ move faster than smaller values. This produces nonlinear steepening.
 
@@ -194,15 +196,12 @@ hyperbolic-pde-advection-burgers/
 │   ├── results_summary.md
 │   └── sources_and_notes.md
 ├── figures/
-│   ├── advection/
-│   ├── burgers/
+│   ├── animations/
 │   ├── error_analysis/
-│   ├── runtime/
-│   ├── boundary_conditions/
-│   ├── numerical_diffusion/
 │   ├── matrix_comparison/
-│   └── animations/
-├── reports/
+│   └── runtime/
+├── raw_upload/
+│   └── upwind.gif
 ├── requirements.txt
 ├── .gitignore
 └── README.md
