@@ -29,7 +29,8 @@ For this project, the animations are therefore not decorative. They are part of 
 The full advection animation compares the explicit schemes on the same square-pulse initial condition. The exact advection equation should simply translate the pulse without changing its shape:
 
 $$
-u(x,t)=u_0(x-ct).$$
+u(x,t)=u_0(x-ct).
+$$
 
 Therefore, any visible deformation is numerical.
 
@@ -61,7 +62,7 @@ u_j^n
 u_j^n-u_{j-1}^n\right).
 $$
 
-Since $c&gt;0$, this is the correct side of the stencil. The solution remains stable because the numerical domain of dependence contains the physical domain of dependence.
+Since $c>0$, this is the correct side of the stencil. The solution remains stable because the numerical domain of dependence contains the physical domain of dependence.
 
 The animation also shows the limitation of first-order upwind: the square pulse gradually loses its sharp corners. This is not physical diffusion. It is introduced by the discretization. In practical simulations, this is often acceptable if the goal is to avoid nonphysical oscillations, but it reduces resolution near discontinuities.
 
@@ -195,7 +196,8 @@ The upwind Burgers method is more robust because it respects the local propagati
 The upwind Burgers animation shows a stable evolution of the nonlinear profile. Since the initial condition is positive,
 
 $$
-u(x,0)=2+0.5\sin(2\pi x),$$
+u(x,0)=2+0.5\sin(2\pi x),
+$$
 
 the local velocity is positive over the whole domain. The backward/upwind stencil is therefore appropriate.
 
