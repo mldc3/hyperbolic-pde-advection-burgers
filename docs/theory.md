@@ -27,12 +27,7 @@ This finite propagation speed imposes a numerical requirement: the numerical dom
 The linear advection equation is:
 
 $$
-\frac{\partial u}{\partial t}
-+
-c
-\frac{\partial u}{\partial x}
-=
-0.
+\frac{\partial u}{\partial t}+ c \frac{\partial u}{\partial x} = 0.
 $$
 
 Here $u(x,t)$ is a transported scalar quantity and $c$ is the constant advection speed.
@@ -100,13 +95,8 @@ If this condition is violated, the numerical method attempts to propagate inform
 The FTCS scheme uses forward time and centered space:
 
 $$
-u_j^{n+1}
-=
-u_j^n
--
-\frac{c\Delta t}{2\Delta x}
-\left(
-u_{j+1}^n-u_{j-1}^n
+u_j^{n+1} = u_j^n - \frac{c\Delta t}{2\Delta x}
+\left( u_{j+1}^n-u_{j-1}^n
 \right).
 $$
 
@@ -121,11 +111,7 @@ This shows that consistency is not sufficient. A numerical scheme must also be s
 For $c>0$, information comes from the left. The upwind method uses:
 
 $$
-u_j^{n+1}
-=
-u_j^n
--
-\frac{c\Delta t}{\Delta x}
+u_j^{n+1} = u_j^n - \frac{c\Delta t}{\Delta x}
 \left(
 u_j^n-u_{j-1}^n
 \right).
@@ -142,10 +128,7 @@ However, upwind is first-order accurate and introduces numerical diffusion. The 
 The downwind method for $c>0$ uses:
 
 $$
-u_j^{n+1}
-=
-u_j^n
--
+u_j^{n+1} = u_j^n -
 \frac{c\Delta t}{\Delta x}
 \left(
 u_{j+1}^n-u_j^n
@@ -163,10 +146,7 @@ The method therefore behaves like anti-diffusion and becomes unstable.
 Lax-Friedrichs is:
 
 $$
-u_j^{n+1}
-=
-\frac{u_{j+1}^n+u_{j-1}^n}{2}
--
+u_j^{n+1} = \frac{u_{j+1}^n+u_{j-1}^n}{2} -
 \frac{c\Delta t}{2\Delta x}
 \left(
 u_{j+1}^n-u_{j-1}^n
@@ -184,11 +164,7 @@ Thus, Lax-Friedrichs demonstrates the trade-off between stability and resolution
 Numerical diffusion is artificial smoothing introduced by the discretization. A numerical scheme may behave as if it were solving:
 
 $$
-\frac{\partial u}{\partial t}
-+
-c
-\frac{\partial u}{\partial x}
-=
+\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} =
 \nu_{\mathrm{num}}
 \frac{\partial^2 u}{\partial x^2}.
 $$
@@ -204,24 +180,16 @@ Numerical diffusion is not always bad. It can stabilize solutions and suppress o
 The inviscid Burgers equation is:
 
 $$
-\frac{\partial u}{\partial t}
-+
-u
-\frac{\partial u}{\partial x}
-=
-0.
+\frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} = 0.
 $$
 
 It can also be written in conservative form:
 
 $$
-\frac{\partial u}{\partial t}
-+
-\frac{\partial}{\partial x}
+\frac{\partial u}{\partial t} + \frac{\partial}{\partial x}
 \left(
 \frac{u^2}{2}
-\right)
-=
+\right) =
 0.
 $$
 
@@ -242,10 +210,7 @@ Since $u$ is positive, the wave propagates mainly to the right, but different pa
 The centered Burgers update is:
 
 $$
-u_j^{n+1}
-=
-u_j^n
--
+u_j^{n+1} = u_j^n -
 u_j^n
 \frac{\Delta t}{2\Delta x}
 \left(
