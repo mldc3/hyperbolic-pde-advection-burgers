@@ -240,6 +240,7 @@ The purpose of comparing both is verification. If both implementations represent
 
 The code uses an $L^2$-type error norm:
 
+
 $$
 E_2 =
 \sqrt{
@@ -247,8 +248,7 @@ E_2 =
 \sum_{j=0}^{N-1}
 \left(
  u_j^{\mathrm{num}}
--
- u_j^{\mathrm{ref}}
+- u_j^{\mathrm{ref}}
 \right)^2
 }.
 $$
