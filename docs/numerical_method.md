@@ -242,15 +242,8 @@ The code uses an $L^2$-type error norm:
 
 
 $$
-E_2 =
-\sqrt{
-\frac{1}{N}
-\sum_{j=0}^{N-1}
-\left(
- u_j^{\mathrm{num}}
-- u_j^{\mathrm{ref}}
-\right)^2
-}.
+E_2 = \sqrt{ \frac{1}{N} \sum_{j=0}^{N-1}
+\left( u_j^{\mathrm{num}} - u_j^{\mathrm{ref}} \right)^2 }.
 $$
 
 This measures the root-mean-square difference between a numerical solution and a reference solution.
