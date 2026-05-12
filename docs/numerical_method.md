@@ -177,7 +177,6 @@ This equation is nonlinear because the propagation speed is the field itself. A 
 The initial condition used in the code is:
 
 $$
-
 u(x,0)=2+0.5\sin(2\pi x).
 $$
 
@@ -333,7 +332,6 @@ $$
 In the implementation, a homogeneous Neumann condition can be approximated by copying the adjacent value:
 
 $$
-
 u_0=\nu_1.
 $$
 
