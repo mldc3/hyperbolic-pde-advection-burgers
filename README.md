@@ -27,38 +27,15 @@ The simulations show:
 
 The first equation is the linear advection equation:
 
-$$
-\frac{\partial u}{\partial t}
-+
-c
-\frac{\partial u}{\partial x}
-=
-0.
-$$
+$$ \frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0. $$
 
 The second equation is the inviscid Burgers equation:
 
-$$
-\frac{\partial u}{\partial t}
-+
-u
-\frac{\partial u}{\partial x}
-=
-0,
-$$
+$$ \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} = 0, $$
 
 or, in conservative form,
 
-$$
-\frac{\partial u}{\partial t}
-+
-\frac{\partial}{\partial x}
-\left(
-\frac{u^2}{2}
-\right)
-=
-0.
-$$
+$$ \frac{\partial u}{\partial t} + \frac{\partial}{\partial x} \left( \frac{u^2}{2} \right) = 0. $$
 
 ---
 
